@@ -14,6 +14,8 @@ dependencies:
 
 usage:
     python3 shazams_downloader.py **/SyncedShazams.csv
+
+Get the Shazams data from https://www.shazam.com/privacy/login/download
 """
 
 from concurrent import futures
