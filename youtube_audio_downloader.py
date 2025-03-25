@@ -17,13 +17,14 @@ usage:
 """
 
 from concurrent import futures
-from os import listdir, path
+from google.youtube import download_audio_as_mp3, get_video_id, get_video_metadata
+from os import listdir, makedirs, path
 from pandas import DataFrame, read_csv
 from re import sub
 from sys import argv
-from youtube import download_audio_as_mp3, get_video_id, get_video_metadata
 
 DOWNLOADS_PATH = path.expanduser("~/Downloads/")
+makedirs(DOWNLOADS_PATH, exist_ok=True)
 
 def is_audio_downloaded(video_id: str) -> bool:
 

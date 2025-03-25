@@ -19,12 +19,13 @@ Get the Shazams data from https://www.shazam.com/privacy/login/download
 """
 
 from concurrent import futures
-from os import listdir, path
+from google.youtube import download_audio_as_mp3, get_video_id, search_youtube
+from os import listdir, makedirs, path
 from pandas import DataFrame, read_csv
 from sys import argv
-from youtube import download_audio_as_mp3, get_video_id, search_youtube
 
 DOWNLOADS_PATH = path.expanduser("~/Downloads/")
+makedirs(DOWNLOADS_PATH, exist_ok=True)
 
 def extract_shazams(file_path: str) -> DataFrame:
 

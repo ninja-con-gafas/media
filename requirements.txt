@@ -1,2 +1,4 @@
-pandas == 2.1.4
-yt-dlp == 2024.8.6
+pandas
+yt-dlp
+
+git+https://github.com/ninja-con-gafas/google.git
